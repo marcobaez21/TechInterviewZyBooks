@@ -26,7 +26,7 @@ imageObj.onload = function() {
     background.fillPatternImage(imageObj);
 };
 
-imageObj.src = 'graph2.png';
+imageObj.src = './graph2.png';
 
 var first_point = new Konva.Circle({
     x: 543,
