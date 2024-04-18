@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/konva@8.3.9/konva.min.js"></script>
+    <title>Tech Interview</title>
+</head>
+<body>
+    <h1 id="main-title">Finding the slope and y-intercept of a line given two points</h1>
+    <div id="algebraically-container">
+      <h2 id="algebraic-title">Algebraically</h2>
+      Given the points (1, 2) and (5, 10) to find the slope we must complete the following steps:
+      <ul>
+        <li>Plug in the points to this equation: (y2-y1)/(x2-x1)</li>
+        <li>Doing so gives us this (10-2)/(5-1)</li>
+        <li>Simplifying (10-2)/(5-1) gives us a slope of 2</li>
+      </ul>
+      Given the points (1, 2) and (5, 10) with a slope of 2 to find the y-intercept we must complete the following steps:
+      <ul>
+        <li>Plug in one of the given points and the slope to the equation y=mx+b where m is the slope and b is the y-intercept</li>
+        <li>Plugging in the point (1, 2) and the slope of 2 results in 2=2x1+b</li>
+        <li>Simplifying 2=2x1+b results in b=0 or a y-intercept of 0</li>
+      </ul>
+    </div>
+    <div id="geometrically-container">
+      <h2 id="geometric-title">Geometrically</h2>
+      <button id="start-button">Start</button>
+      <button id="stop-button">Stop</button>
+      <div id="container"></div>
+    </div>
+    <div id="quiz-container">
+      <h2 id="quiz-title">Quiz</h2>
+      <div id="quiz_question">Given the points (1, 2), (3, 4) what is the slope and y-intercept?</div>
+      <br>
+      <input type="text" id="slope-answer-box" placeholder="Ex Slope: 1.75">
+      <input type="text" id="y-int-answer-box" placeholder="Ex Y int: 2.00">
+      <button id="submit-button">Submit</button>
+    </div>
+    <script src="konva_shapes.js"></script>
+</body>
+</html>
