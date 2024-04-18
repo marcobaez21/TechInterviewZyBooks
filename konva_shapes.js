@@ -110,7 +110,7 @@ var yIntLine = new Konva.Line({
 var y_int_text = new Konva.Text({
   x: 50,
   y: 480,
-  text: 'y-intercept = 0',
+  text: 'y-intercept = 1',
   fontSize: 20,
   fill: 'black',
   opacity: 0,
