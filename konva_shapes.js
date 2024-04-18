@@ -28,8 +28,6 @@ imageObj.onload = function() {
 
 imageObj.src = 'graph2.png';
 
-layer.add(background);
-
 var first_point = new Konva.Circle({
     x: 543,
     y: 238,
@@ -38,8 +36,6 @@ var first_point = new Konva.Circle({
     opacity: 0,
   });
 
-layer.add(first_point);
-
 var second_point = new Konva.Circle({
     x: 326,
     y: 346,
@@ -47,8 +43,6 @@ var second_point = new Konva.Circle({
     fill: 'red',
     opacity: 0,
   });
-
-layer.add(second_point);
 
 var redLine = new Konva.Line({
     points: [second_point.x(),second_point.y(), first_point.x(), first_point.y()],
@@ -59,39 +53,79 @@ var redLine = new Konva.Line({
     opacity: 0,
   });
 
+var runLine = new Konva.Line({
+  points: [second_point.x(),second_point.y(), second_point.x(),second_point.y()],
+  stroke: 'black',
+  strokeWidth: 5,
+  lineCap: 'round',
+  lineJoin: 'round',
+  opacity: 0,
+});
+
+var riseLine = new Konva.Line({
+  points: [first_point.x(), first_point.y(), first_point.x(), first_point.y()],
+  stroke: 'black',
+  strokeWidth: 5,
+  lineCap: 'round',
+  lineJoin: 'round',
+  opacity: 0,
+});
+
+var slope_equation = new Konva.Text({
+  x: 625,
+  y: 280,
+  text: 'm =   / ',
+  fontSize: 30,
+  fill: 'black',
+  opacity: 0,
+});
+
+var run_number = new Konva.Text({
+  x: 425,
+  y: 355,
+  text: '2',
+  fontSize: 30,
+  fill: 'black',
+  opacity: 0,
+});
+
+var rise_number = new Konva.Text({
+  x: 550,
+  y: 280,
+  text: '1',
+  fontSize: 30,
+  fill: 'black',
+  opacity: 0,
+});
+
+var yIntLine = new Konva.Line({
+  points: [second_point.x(), second_point.y(), second_point.x(), second_point.y()],
+  stroke: 'black',
+  strokeWidth: 5,
+  lineCap: 'round',
+  lineJoin: 'round',
+  opacity: 0,
+});
+
+var y_int_text = new Konva.Text({
+  x: 50,
+  y: 480,
+  text: 'y-intercept = 0',
+  fontSize: 20,
+  fill: 'black',
+  opacity: 0,
+});
+
+layer.add(background);
+layer.add(runLine);
+layer.add(riseLine);
+layer.add(yIntLine);
+layer.add(first_point);
+layer.add(second_point);
 layer.add(redLine);
-
-var anim = new Konva.Animation(eachFrame, layer);
-
-function eachFrame(){
-    if(first_point.opacity() <= 1){
-        const newOpacity = first_point.opacity()+0.005
-        first_point.opacity(newOpacity);
-    }
-    if(first_point.opacity()>1){
-        const newOpacity2 = second_point.opacity()+0.005
-        second_point.opacity(newOpacity2);
-    }
-    if(second_point.opacity()>1){
-        const newOpacity = redLine.opacity()+0.005
-        redLine.opacity(newOpacity)
-    }
-}
-
-document.getElementById('start-button').addEventListener(
-    'click',
-    function () {
-      anim.start();
-    },
-    false
-  );
-
-  document.getElementById('stop-button').addEventListener(
-    'click',
-    function () {
-      anim.stop();
-    },
-    false
-  );
+layer.add(slope_equation);
+layer.add(run_number);
+layer.add(rise_number);
+layer.add(y_int_text);
 
 stage.draw();
