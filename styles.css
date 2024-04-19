@@ -6,8 +6,21 @@ body {
     padding: 10px;
 }
 
+#algebraically-container{
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 0 0 5px grey;
+    width: 800px;
+    margin: 0 auto;
+
+}
+
 #geometrically-container{
-    width: 800px
+    width: 800px;
+    border: 1px solid black;
+    box-shadow: 0 0 5px grey;
+    padding: 10px;
+    margin: 0 auto;
 }
 
 #container {
@@ -16,5 +29,13 @@ body {
     padding: 10px;
     vertical-align: middle;
     box-shadow: 0 0 5px grey;
+    margin: 0 auto;
     }
 
+#quiz-container{
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 0 0 5px grey;
+    width: 800px;
+    margin: 0 auto;
+}

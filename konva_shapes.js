@@ -1,3 +1,4 @@
+//Creating width, height, stage, and background image
 const width = 975;
 const height = window.innerHeight - (window.innerHeight*0.30);
 
@@ -10,7 +11,6 @@ const stage = new Konva.Stage({
 const layer = new Konva.Layer();
 stage.add(layer);
 
-// another solution is to use rectangle shape
 var background = new Konva.Rect({
 x: 0,
 y: 0,
@@ -20,14 +20,13 @@ height: stage.height(),
 
 var fillPatternImage = background.fillPatternImage();
 
-// set fill pattern image
 var imageObj = new Image();
 imageObj.onload = function() {
     background.fillPatternImage(imageObj);
 };
-
 imageObj.src = 'graph.png';
 
+//Creating all konva shapes
 var first_point = new Konva.Circle({
     x: 543,
     y: 238,
@@ -116,6 +115,7 @@ var y_int_text = new Konva.Text({
   opacity: 0,
 });
 
+//Adding all shapes to layer and drawing stage
 layer.add(background);
 layer.add(runLine);
 layer.add(riseLine);

@@ -8,7 +8,7 @@
     <title>Tech Interview</title>
 </head>
 <body>
-    <h1 id="main-title">Finding the slope and y-intercept of a line given two points</h1>
+    <h1 id="main-title">Finding the Slope and Y-Intercept of a Line Given Two Points</h1>
     <div id="algebraically-container">
       <h2 id="algebraic-title">Algebraically</h2>
       Given the points (1, 2) and (5, 10) to find the slope we must complete the following steps:
@@ -17,22 +17,38 @@
         <li>Doing so gives us this (10-2)/(5-1)</li>
         <li>Simplifying (10-2)/(5-1) gives us a slope of 2</li>
       </ul>
-      Given the points (1, 2) and (5, 10) with a slope of 2 to find the y-intercept we must complete the following steps:
+      Given the points (1, 2) and (5, 10) with a slope of 2 to find the Y-intercept we must complete the following steps:
       <ul>
-        <li>Plug in one of the given points and the slope to the equation y=mx+b where m is the slope and b is the y-intercept</li>
+        <li>Plug in one of the given points and the slope to the equation y=mx+b where m is the slope and b is the Y-intercept</li>
         <li>Plugging in the point (1, 2) and the slope of 2 results in 2=2x1+b</li>
-        <li>Simplifying 2=2x1+b results in b=0 or a y-intercept of 0</li>
+        <li>Simplifying 2=2x1+b results in b=0 or a Y-intercept of 0</li>
       </ul>
     </div>
+    <br>
     <div id="geometrically-container">
-      <h2 id="geometric-title">Geometrically</h2>
+      <h2 id="geometric-title">Graphically</h2>
       <button id="start-button">Start</button>
       <button id="stop-button">Stop</button>
       <div id="container"></div>
+      <br>
+      Given the points (2, 2) and (4, 3) to find the slope graphically we must complete the following steps, as seen above:
+      <ul>
+        <li>Plot both points and draw a line connecting both of them</li>
+        <li>Count the x value's distance between the two points, in this case it is 2</li>
+        <li>Count the y value's distance between the two points, in this case it is 1</li>
+        <li>Plugging into the equation m = Δy / Δx gives a slope of 1/2</li>
+      </ul>
+      Given the points (2, 2) and (4, 3) to find the Y-Intercept graphically we must complete the following steps, as seen above:
+      <ul>
+        <li>Plot both points and draw a line connecting both of them</li>
+        <li>Continue drawing this line until the line hits the Y axis</li>
+        <li>The point where the line hits the Y axis is the Y-Intercept. In this case it is 1</li>
+      </ul>
     </div>
+    <br>
     <div id="quiz-container">
       <h2 id="quiz-title">Quiz</h2>
-      <div id="quiz_question">Given the points () what is the slope and y-intercept?</div>
+      <div id="quiz_question">Given the points () what is the slope and Y-intercept?</div>
       <br>
       <input type="text" id="slope-answer-box" placeholder="Ex Slope: 1.7">
       <input type="text" id="y-int-answer-box" placeholder="Ex Y int: 2.0">
